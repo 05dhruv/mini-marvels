@@ -77,7 +77,7 @@ export default function ParentsSection() {
 
         {/* Content */}
 
-        <div className="mt-14 grid lg:grid-cols-[1fr_1.05fr] items-center gap-12">
+       <div className="mt-8 grid lg:grid-cols-[0.95fr_1.05fr] items-center gap-8 lg:gap-10"/>
 
           {/* Left Image */}
 
@@ -85,7 +85,7 @@ export default function ParentsSection() {
 
             {/* Background Shape */}
 
-            <div className="absolute h-[500px] w-[500px] rounded-[45%] bg-gradient-to-br from-pink-200 via-pink-100 to-cyan-100 blur-xl opacity-90"></div>
+            <div className="absolute h-[430px] w-[430px] lg:h-[470px] lg:w-[470px] rounded-[45%] bg-gradient-to-br from-pink-200 via-pink-100 to-cyan-100 blur-xl opacity-90"></div>
 
             <div className="absolute -left-8 top-10 h-20 w-20 rounded-full bg-pink-300/60 blur-md"></div>
 
@@ -93,7 +93,7 @@ export default function ParentsSection() {
 
             {/* Glass Frame */}
 
-            <div className="relative rounded-[42px] border border-white/70 bg-white/40 p-4 backdrop-blur-2xl shadow-[0_35px_90px_rgba(236,72,153,.25)]">
+            <div className="relative rounded-[42px] border border-white/70 bg-white/40 p-3 backdrop-blur-2xl shadow-[0_35px_90px_rgba(236,72,153,.25)]">
 
               <div className="overflow-hidden rounded-[36px]">
             
@@ -200,7 +200,6 @@ export default function ParentsSection() {
           ✨
         </div>
 
-      </div>
 
       {/* Bottom Gradient */}
 
