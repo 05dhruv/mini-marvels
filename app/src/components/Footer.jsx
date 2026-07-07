@@ -26,13 +26,13 @@ export default function Footer() {
 
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
 
-      <div className="relative max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-8">
+      <div className="relative max-w-7xl mx-auto px-5 lg:px-8 pt-8 pb-4">
 
         {/* Top Glass Card */}
 
-        <div className="mb-14 rounded-[34px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 lg:p-10">
+        <div className="mb-6 rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 lg:p-6">
 
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr_1fr]">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_.8fr_.8fr_1fr]">
 
             {/* Column 1 */}
 
@@ -42,13 +42,13 @@ export default function Footer() {
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl overflow-hidden">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl overflow-hidden">
 
                   <Image
                     src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783057515/IMG-20260702-WA0015.jpg_nvarxn.jpg"
                     alt="Mini Marvels"
-                    width={80}
-                    height={80}
+                    width={56}
+                    height={56}
                     className="rounded-full object-cover"
                   />
 
@@ -56,7 +56,7 @@ export default function Footer() {
 
                 <div>
 
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-lg font-bold">
 
                     Mini Marvels
 
@@ -72,7 +72,7 @@ export default function Footer() {
 
               </div>
 
-              <p className="mt-6 max-w-md leading-8 text-slate-300">
+              <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
 
                 Compassionate pediatric healthcare dedicated to nurturing
                 every child's healthy growth with expert medical care,
@@ -86,13 +86,13 @@ export default function Footer() {
 
             <div>
 
-              <h4 className="text-xl font-bold text-white">
+              <h4 className="text-lg font-bold text-white">
 
                 Quick Links
 
               </h4>
 
-              <div className="mt-6 flex flex-col gap-4">
+              <div className="mt-4 flex flex-col gap-2">
 
                 <Link
                   href="/"
@@ -142,7 +142,7 @@ export default function Footer() {
 
             <div>
 
-              <h4 className="text-xl font-bold text-white">
+              <h4 className="text-lg font-bold text-white">
 
                 Our Services
 
@@ -183,17 +183,17 @@ export default function Footer() {
 
             <div>
 
-              <h4 className="text-xl font-bold text-white">
+              <h4 className="text-lg font-bold text-white">
 
                 Contact Us
 
               </h4>
 
-              <div className="mt-6 space-y-5">
+              <div className="mt-4 space-y-3">
 
                 <div className="group flex items-start gap-4">
 
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-pink-500/20 text-pink-300 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-500/20 text-pink-300 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
 
                     <Phone size={18} />
 
@@ -305,7 +305,7 @@ export default function Footer() {
 
               {/* Social Icons */}
 
-              <div className="mt-8">
+              <div className="mt-5">
 
                 <h5 className="text-lg font-semibold">
 
@@ -313,27 +313,27 @@ export default function Footer() {
 
                 </h5>
 
-                <div className="mt-4 flex gap-4">
+                <div className="mt-3 flex gap-3">
 
                   <a
-                    href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-pink-500"
+                    href="https://www.instagram.com/dr.minimarvels?igsh=MXYxM3BpZDRqNWhhNA=="
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-pink-500"
                   >
                     <FaInstagram size={20} />
                   </a>
 
                   <a
                     href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500"
                   >
                     <FaFacebookF size={20} />
                   </a>
 
                   <a
                     href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-green-500"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-green-500"
                   >
-                    <FaWhatsapp size={20} />
+                    <MessageCircle size={20} />
                   </a>
 
                 </div>
@@ -348,9 +348,9 @@ export default function Footer() {
 
         {/* Bottom Footer Starts Below */}        {/* Bottom Footer */}
 
-        <div className="border-t border-white/10 pt-6">
+        <div className="border-t border-white/10 pt-4">
 
-          <div className="flex flex-col items-center justify-between gap-4 text-center lg:flex-row">
+          <div className="flex flex-col items-center justify-between gap-2 text-center lg:flex-row">
 
             {/* Copyright */}
 
@@ -384,22 +384,15 @@ export default function Footer() {
                 Terms & Conditions
               </Link>
 
-              <Link
-                href="/contact"
-                className="text-slate-400 transition-colors duration-300 hover:text-pink-400"
-              >
-                Contact
-              </Link>
-
             </div>
 
           </div>
 
           {/* Bottom Line */}
 
-          <div className="mt-6 text-center">
+          <div className="mt-3 text-center">
 
-            <p className="text-sm text-slate-500">
+           <p className="text-sm text-slate-500">
 
               Designed with
               <span className="mx-1 text-pink-400">♥</span>

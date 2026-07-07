@@ -22,27 +22,27 @@ export default function Header() {
   const navLinks = [
     {
       name: "Home",
-      href: "#",
+      href: "/",
     },
     {
       name: "About Us",
-      href: "#about",
+      href: "/about",
     },
     {
       name: "Services",
-      href: "#services",
+      href: "/services",
     },
     {
       name: "Parents",
-      href: "#parents",
+      href: "/parents",
     },
     {
       name: "Patient Resources",
-      href: "#resources",
+      href: "/PatientResourcesSection",
     },
     {
       name: "Contact Us",
-      href: "#contact",
+      href: "/contact",
     },
   ];  return (
     <>

@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-white py-20 lg:py-28"
+      className="relative overflow-hidden bg-white pt-8 pb-8 lg:pt-12 lg:pb-10"
     >
         
       {/* Decorative Elements */}
@@ -23,7 +23,7 @@ export default function AboutSection() {
 
           {/* LEFT IMAGE */}
 
-          <div className="relative">
+          <div className="relative pb-14">
 
             {/* Pink Background Shape */}
 
@@ -45,7 +45,7 @@ export default function AboutSection() {
 
             {/* Floating Card */}
 
-            <div className="absolute -bottom-6 left-8 rounded-2xl bg-white px-6 py-5 shadow-xl border border-pink-100">
+            <div className="absolute -bottom-10 left-6 rounded-xl bg-white px-4 py-4 shadow-xl border border-pink-100">
 
               <p className="text-xs uppercase tracking-widest text-pink-500 font-semibold">
 
@@ -65,9 +65,9 @@ export default function AboutSection() {
 
           {/* RIGHT CONTENT */}
 
-          <div>
+          <div className="text-center lg:text-left">
 
-            <span className="inline-flex rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold text-pink-600">
+            <span className="inline-flex rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold text-pink-600 mx-auto lg:mx-0">
 
               ABOUT US
 
@@ -85,7 +85,7 @@ export default function AboutSection() {
 
             </h2>
 
-            <p className="mt-7 text-lg leading-8 text-slate-600">
+            <p className="mt-7 text-lg leading-8 text-slate-600 max-w-2xl mx-auto lg:mx-0">
 
               At Mini Marvels Child Care Clinic, we combine compassionate
               pediatric expertise with a warm, family-friendly environment.
@@ -128,11 +128,11 @@ export default function AboutSection() {
 
             {/* CTA */}
 
-            <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-start gap-5 text-center sm:text-left">
 
               <Link
                 href="#services"
-                className="inline-flex items-center rounded-full bg-pink-500 px-8 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-pink-600 hover:-translate-y-1 hover:shadow-2xl"
+                className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-pink-500 px-8 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-pink-600 hover:-translate-y-1 hover:shadow-2xl"
               >
                 Explore Our Services
 
@@ -140,30 +140,13 @@ export default function AboutSection() {
 
               </Link>
 
-              <div>
-
-                <p className="text-sm uppercase tracking-widest text-pink-500 font-semibold">
-
-                  Need Assistance?
-
-                </p>
-
-                <a
-                  href="tel:+919999999999"
-                  className="mt-1 block text-2xl font-bold text-slate-900 hover:text-pink-500 transition-colors"
-                >
-                  +91 99999 99999
-                </a>
-
-              </div>
+</div>
 
             </div>
 
           </div>
 
         </div>
-
-      </div>
 
       {/* Decorative SVG */}
 

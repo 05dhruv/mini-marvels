@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-14 min-h-[88vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-14 min-h-[80vh]">
 
           {/* LEFT CONTENT */}
 

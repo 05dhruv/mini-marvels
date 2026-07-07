@@ -1,4 +1,6 @@
 import "./globals.css";
+import Footer from "./src/components/Footer";
+import Header from "./src/components/Header";
 
 export const metadata = {
   title: "Mini Marvels Child Care Clinic",
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }

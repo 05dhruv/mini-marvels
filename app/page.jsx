@@ -4,7 +4,9 @@ import AboutSection from "./src/components/AboutSection";
 import ServiceSection from "./src/components/ServiceSection";
 import WhyChooseSection from "./src/components/WhyChooseSection";
 import ParentSection from "./src/components/ParentSection";
-import Footer from "./src/components/Footer";
+import PatientResourceSection from "./src/components/PatientResourceSection";
+import ContactSection from "./src/components/contactSection";
+import AppointmentPopup from "./src/components/AppointmentPopup";
 export default function Home() {
   return (
     <>
@@ -14,7 +16,9 @@ export default function Home() {
       <ServiceSection />
       <WhyChooseSection />
       <ParentSection />
-      <Footer />
+      <PatientResourceSection />
+      <ContactSection />
+      <AppointmentPopup />
     </>
   );
 }
