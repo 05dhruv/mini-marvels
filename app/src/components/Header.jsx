@@ -38,7 +38,7 @@ export default function Header() {
     },
     {
       name: "Patient Resources",
-      href: "/PatientResourcesSection",
+      href: "/resources",
     },
     {
       name: "Contact Us",
@@ -94,7 +94,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-4">
 
               <Link
-                href="#appointment"
+                href="/appointment"
                 className="inline-flex items-center gap-2 rounded-full bg-pink-500 hover:bg-pink-600 text-white font-semibold px-7 py-3 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
               >
                 Book Appointment

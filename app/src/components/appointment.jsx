@@ -29,7 +29,7 @@ export default function AppointmentPage() {
             {/* Left */}
             <div>
 
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-semibold mt-10 mb-6">
                 <CalendarDays className="w-4 h-4" />
                 Book Your Child's Visit
               </div>

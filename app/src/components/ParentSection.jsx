@@ -154,7 +154,7 @@ export default function ParentsSection() {
             <div className="mt-8 flex justify-center lg:justify-start">
 
               <Link
-                href="/contact"
+                href="/parents"
                 className="inline-flex w-full justify-center sm:w-auto items-center rounded-full bg-pink-500 px-7 py-3.5 text-white font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.30)]"
               >
 
