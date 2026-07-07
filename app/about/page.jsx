@@ -326,7 +326,7 @@ export default function AboutPage() {
             <div className="relative overflow-hidden rounded-[32px] bg-white shadow-2xl border border-slate-100 p-5">
 
               <Image
-                src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1782805199/doctor_img_f7lmak.png"
+                src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783404020/DSC03444.JPG_plr8b0.jpg"
                 alt="Doctor"
                 width={520}
                 height={650}
