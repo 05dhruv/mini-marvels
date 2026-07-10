@@ -1,0 +1,105 @@
+[35mapp/about/page.jsx[m[36m:[m[32m28[m[36m:[m        <div className="flex items-center justify-center gap-2 text-sm text-slate-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m30[m[36m:[m          <Link href="/" className="hover:text-pink-[1;31m500[m transition">
+[35mapp/about/page.jsx[m[36m:[m[32m36[m[36m:[m          <span className="font-medium text-pink-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m48[m[36m:[m            <Heart className="h-4 w-4 fill-pink-[1;31m500[m text-pink-[1;31m500[m" />
+[35mapp/about/page.jsx[m[36m:[m[32m62[m[36m:[m          <span className="block text-pink-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m89[m[36m:[m              <Heart className="h-6 w-6 text-pink-[1;31m500[m" />
+[35mapp/about/page.jsx[m[36m:[m[32m177[m[36m:[m                  <Heart className="h-4 w-4 text-pink-[1;31m500[m fill-pink-[1;31m500[m" />
+[35mapp/about/page.jsx[m[36m:[m[32m187[m[36m:[m                  <p className="text-xs text-slate-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m214[m[36m:[m                  <p className="text-xs text-slate-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m240[m[36m:[m              <span className="block text-pink-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m273[m[36m:[m                <Stethoscope className="h-8 w-8 text-pink-[1;31m500[m" />
+[35mapp/about/page.jsx[m[36m:[m[32m331[m[36m:[m                width={[1;31m520[m}
+[35mapp/about/page.jsx[m[36m:[m[32m341[m[36m:[m              <p className="text-xs uppercase tracking-wider text-slate-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m367[m[36m:[m              <span className="block text-pink-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m466[m[36m:[m            <span className="block text-pink-[1;31m500[m">
+[35mapp/about/page.jsx[m[36m:[m[32m486[m[36m:[m              <Heart className="h-7 w-7 text-pink-[1;31m500[m fill-pink-[1;31m500[m" />
+[35mapp/about/page.jsx[m[36m:[m[32m561[m[36m:[m    <div className="rounded-[24px] bg-gradient-to-r from-pink-[1;31m500[m via-pink-400 to-cyan-400 p-6 shadow-xl">
+[35mapp/about/page.jsx[m[36m:[m[32m570[m[36m:[m            [1;31m500[m0+
+[35mapp/about/page.jsx[m[36m:[m[32m637[m[36m:[m          <span className="block text-pink-[1;31m500[m">
+[35mapp/contact/page.jsx[m[36m:[m[32m47[m[36m:[m              <span className="block text-pink-[1;31m500[m">
+[35mapp/contact/page.jsx[m[36m:[m[32m67[m[36m:[m                className="inline-flex items-center rounded-full bg-pink-[1;31m500[m px-7 py-3.5 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.35)]"
+[35mapp/contact/page.jsx[m[36m:[m[32m75[m[36m:[m                className="inline-flex items-center rounded-full border-2 border-pink-200 bg-white px-7 py-3.5 font-semibold text-slate-800 transition-all duration-300 hover:border-pink-[1;31m500[m hover:text-pink-[1;31m500[m"
+[35mapp/contact/page.jsx[m[36m:[m[32m120[m[36m:[m                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-[1;31m500[m text-white transition-all duration-300 group-hover:scale-110">
+[35mapp/contact/page.jsx[m[36m:[m[32m147[m[36m:[m                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-[1;31m500[m text-white transition-all duration-300 group-hover:scale-110">
+[35mapp/contact/page.jsx[m[36m:[m[32m161[m[36m:[m                      className="mt-2 block text-xl font-bold text-pink-[1;31m500[m hover:text-pink-600 transition"
+[35mapp/contact/page.jsx[m[36m:[m[32m174[m[36m:[m                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-[1;31m500[m text-white transition-all duration-300 group-hover:scale-110">
+[35mapp/contact/page.jsx[m[36m:[m[32m188[m[36m:[m                      className="mt-2 block text-pink-[1;31m500[m hover:text-pink-600 break-all"
+[35mapp/contact/page.jsx[m[36m:[m[32m201[m[36m:[m                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-[1;31m500[m text-white transition-all duration-300 group-hover:scale-110">
+[35mapp/contact/page.jsx[m[36m:[m[32m252[m[36m:[m                    className="h-14 rounded-2xl border border-pink-100 bg-pink-50/50 px-5 outline-none transition-all duration-300 focus:border-pink-[1;31m500[m focus:bg-white focus:ring-4 focus:ring-pink-100"
+[35mapp/contact/page.jsx[m[36m:[m[32m258[m[36m:[m                    className="h-14 rounded-2xl border border-pink-100 bg-pink-50/50 px-5 outline-none transition-all duration-300 focus:border-pink-[1;31m500[m focus:bg-white focus:ring-4 focus:ring-pink-100"
+[35mapp/contact/page.jsx[m[36m:[m[32m266[m[36m:[m                  className="h-14 w-full rounded-2xl border border-pink-100 bg-pink-50/50 px-5 outline-none transition-all duration-300 focus:border-pink-[1;31m500[m focus:bg-white focus:ring-4 focus:ring-pink-100"
+[35mapp/contact/page.jsx[m[36m:[m[32m272[m[36m:[m                  className="h-14 w-full rounded-2xl border border-pink-100 bg-pink-50/50 px-5 outline-none transition-all duration-300 focus:border-pink-[1;31m500[m focus:bg-white focus:ring-4 focus:ring-pink-100"
+[35mapp/contact/page.jsx[m[36m:[m[32m278[m[36m:[m                  className="w-full rounded-2xl border border-pink-100 bg-pink-50/50 px-5 py-4 outline-none resize-none transition-all duration-300 focus:border-pink-[1;31m500[m focus:bg-white focus:ring-4 focus:ring-pink-100"
+[35mapp/contact/page.jsx[m[36m:[m[32m283[m[36m:[m                  className="group inline-flex w-full items-center justify-center rounded-full bg-pink-[1;31m500[m px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.30)]"
+[35mapp/contact/page.jsx[m[36m:[m[32m323[m[36m:[m              <span className="block text-pink-[1;31m500[m">
+[35mapp/contact/page.jsx[m[36m:[m[32m358[m[36m:[m                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100 text-pink-[1;31m500[m">
+[35mapp/contact/page.jsx[m[36m:[m[32m380[m[36m:[m                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100 text-pink-[1;31m500[m">
+[35mapp/contact/page.jsx[m[36m:[m[32m392[m[36m:[m                      className="mt-1 block font-semibold text-pink-[1;31m500[m hover:text-pink-600"
+[35mapp/contact/page.jsx[m[36m:[m[32m403[m[36m:[m                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100 text-pink-[1;31m500[m">
+Binary file [35mapp/favicon.ico[m matches
+[35mapp/parents/page.jsx[m[36m:[m[32m82[m[36m:[m                  className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-8 py-4 font-semibold text-slate-700 transition hover:border-pink-[1;31m500[m"
+[35mapp/parents/page.jsx[m[36m:[m[32m135[m[36m:[m              <div className="relative w-full max-w-[[1;31m560[mpx]">
+[35mapp/parents/page.jsx[m[36m:[m[32m144[m[36m:[m                  className="w-full h-auto max-h-[[1;31m560[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m180[m[36m:[m                className="w-full max-w-[[1;31m560[mpx] h-auto max-h-[[1;31m520[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m375[m[36m:[m                className="w-full max-w-[[1;31m560[mpx] h-auto max-h-[[1;31m520[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m407[m[36m:[m                className="w-full max-w-[[1;31m560[mpx] h-auto max-h-[[1;31m520[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m602[m[36m:[m                className="w-full max-w-[[1;31m560[mpx] h-auto max-h-[[1;31m520[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m760[m[36m:[m                src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783334464/a8f74ca3bbcd7f256e004[1;31m5f0[m1716d25f_oxjjww.jpg"
+[35mapp/parents/page.jsx[m[36m:[m[32m764[m[36m:[m                className="w-full max-w-[[1;31m550[mpx] h-auto max-h-[[1;31m500[mpx] rounded-[45px] object-contain"
+[35mapp/parents/page.jsx[m[36m:[m[32m838[m[36m:[m                  className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-8 py-4 font-semibold text-slate-700 transition hover:border-pink-[1;31m500[m"
+[35mapp/resources/page.jsx[m[36m:[m[32m157[m[36m:[m              <div className="group h-full overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg transition-all duration-[1;31m500[m hover:-translate-y-2 hover:shadow-xl">
+[35mapp/resources/page.jsx[m[36m:[m[32m223[m[36m:[m            <div className="relative h-[320px] md:h-[[1;31m500[mpx] rounded-[30px] overflow-hidden shadow-xl">
+[35mapp/resources/page.jsx[m[36m:[m[32m258[m[36m:[m                  <div className="w-3 h-3 rounded-full bg-pink-[1;31m500[m mt-2"></div>
+[35mapp/resources/page.jsx[m[36m:[m[32m265[m[36m:[m                  <div className="w-3 h-3 rounded-full bg-pink-[1;31m500[m mt-2"></div>
+[35mapp/resources/page.jsx[m[36m:[m[32m272[m[36m:[m                  <div className="w-3 h-3 rounded-full bg-pink-[1;31m500[m mt-2"></div>
+[35mapp/resources/page.jsx[m[36m:[m[32m279[m[36m:[m                  <div className="w-3 h-3 rounded-full bg-pink-[1;31m500[m mt-2"></div>
+[35mapp/resources/page.jsx[m[36m:[m[32m354[m[36m:[m          <div className="bg-gradient-to-r from-pink-[1;31m500[m via-pink-400 to-rose-400 rounded-[32px] overflow-hidden">
+[35mapp/services/child-checkups/page.jsx[m[36m:[m[32m109[m[36m:[m    <div className="flex items-center justify-center lg:justify-start text-sm text-gray-[1;31m500[m">
+[35mapp/services/child-checkups/page.jsx[m[36m:[m[32m221[m[36m:[m            <div className="h-[[1;31m540[mpx] w-[[1;31m540[mpx] rounded-[40px] bg-gradient-to-br from-pink-100 via-rose-50 to-pink-50 rotate-6 shadow-[0_30px_80px_rgba(236,72,153,0.10)]"></div>
+[35mapp/services/child-checkups/page.jsx[m[36m:[m[32m249[m[36m:[m                duration-[1;31m500[m
+[35mapp/services/child-checkups/page.jsx[m[36m:[m[32m662[m[36m:[m                className="border-l-4 border-pink-[1;31m500[m pl-5"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m40[m[36m:[m          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-[1;31m500[m">
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m44[m[36m:[m              className="transition hover:text-pink-[1;31m500[m"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m53[m[36m:[m              className="transition hover:text-pink-[1;31m500[m"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m60[m[36m:[m            <span className="font-semibold text-pink-[1;31m500[m">
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m78[m[36m:[m                <span className="block text-pink-[1;31m500[m">
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m104[m[36m:[m                    className="mt-1 text-pink-[1;31m500[m flex-shrink-0"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m124[m[36m:[m                    className="mt-1 text-sky-[1;31m500[m flex-shrink-0"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m144[m[36m:[m                    className="mt-1 text-yellow-[1;31m500[m flex-shrink-0"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m164[m[36m:[m                    className="mt-1 text-pink-[1;31m500[m flex-shrink-0"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m225[m[36m:[m              <span className="block text-pink-[1;31m500[m">
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m301[m[36m:[m                <Ruler className="text-pink-[1;31m500[m" size={28} />
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m369[m[36m:[m                <Activity className="text-pink-[1;31m500[m" size={28} />
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m479[m[36m:[m                <CheckCircle2 className="text-pink-[1;31m500[m" size={22} />
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m541[m[36m:[m                <CheckCircle2 className="text-pink-[1;31m500[m" size={22} />
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m599[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m622[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m645[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m668[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/growth-monitoring/page.jsx[m[36m:[m[32m691[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m112[m[36m:[m                <p className="text-gray-[1;31m500[m mt-1">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m131[m[36m:[m                <p className="text-gray-[1;31m500[m mt-1">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m150[m[36m:[m                <p className="text-gray-[1;31m500[m mt-1">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m294[m[36m:[m              <p className="text-sm text-gray-[1;31m500[m mt-2">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m311[m[36m:[m              <p className="text-sm text-gray-[1;31m500[m mt-2">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m328[m[36m:[m              <p className="text-sm text-gray-[1;31m500[m mt-2">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m342[m[36m:[m              <p className="text-sm text-gray-[1;31m500[m mt-2">
+[35mapp/services/newborn-care/page.jsx[m[36m:[m[32m405[m[36m:[m      <section className="py-16 px-5 bg-gradient-to-r from-pink-400 via-pink-[1;31m500[m to-pink-600 text-white text-center">
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m38[m[36m:[m          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-[1;31m500[m">
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m42[m[36m:[m              className="hover:text-pink-[1;31m500[m transition"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m51[m[36m:[m              className="hover:text-pink-[1;31m500[m transition"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m58[m[36m:[m            <span className="font-semibold text-pink-[1;31m500[m">
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m96[m[36m:[m                <span className="block text-pink-[1;31m500[m">
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m121[m[36m:[m                    className="mt-1 text-pink-[1;31m500[m flex-shrink-0"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m143[m[36m:[m                    className="mt-1 text-sky-[1;31m500[m flex-shrink-0"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m165[m[36m:[m                    className="mt-1 text-yellow-[1;31m500[m flex-shrink-0"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m187[m[36m:[m                    className="mt-1 text-pink-[1;31m500[m flex-shrink-0"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m284[m[36m:[m                <Milk className="text-pink-[1;31m500[m" size={28} />
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m379[m[36m:[m                <CheckCircle2 className="text-pink-[1;31m500[m" size={26} />
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m432[m[36m:[m                <CheckCircle2 className="text-pink-[1;31m500[m" size={22} />
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m499[m[36m:[m                <CheckCircle2 className="text-pink-[1;31m500[m" size={22} />
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m579[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m601[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m624[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
+[35mapp/services/nutrition-advice/page.jsx[m[36m:[m[32m646[m[36m:[m                  className="text-pink-[1;31m500[m transition-transform duration-300 group-open:rotate-180"
