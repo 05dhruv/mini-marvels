@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import {
   ArrowRight,
   Heart,
@@ -47,11 +49,24 @@ const resources = [
 ];
 
 export default function PatientResources() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: false,
+const autoplay = useRef(
+  Autoplay({
+    delay: 3000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+    playOnInit: true,
+  })
+);
+
+const [emblaRef] = useEmblaCarousel(
+  {
+    loop: true,
     align: "start",
-    dragFree: true,
-  });
+    dragFree: false,
+    skipSnaps: false,
+  },
+  [autoplay.current]
+);
 
   return (
     <div className="bg-[#FFF9FC] min-h-screen">
@@ -102,95 +117,100 @@ export default function PatientResources() {
 
 </section>
 
-      {/* ================= RESOURCE CAROUSEL ================= */}
-            <section className="py-14 md:py-16">
-        <div className="max-w-7xl mx-auto px-6">
+     {/* ================= RESOURCE CAROUSEL ================= */}
+<section className="py-10 md:py-12">
+  <div className="max-w-7xl mx-auto px-6">
 
-          <div className="text-center mb-10">
-            <span className="inline-flex items-center rounded-full bg-pink-100 text-pink-600 px-4 py-2 text-sm font-semibold">
-              Helpful Resources
-            </span>
+    <div className="text-center mb-10">
+      <span className="inline-flex items-center rounded-full bg-pink-100 text-pink-600 px-4 py-2 text-sm font-semibold">
+        Helpful Resources
+      </span>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-slate-800">
-              Parenting Made Easier
-            </h2>
+      <h2 className="mt-4 text-3xl md:text-5xl font-bold text-slate-800">
+        Parenting Made Easier
+      </h2>
 
-            <p className="mt-4 max-w-2xl mx-auto text-slate-600 leading-8">
-              Trusted pediatric guidance to help parents make confident
-              healthcare decisions for their little ones.
-            </p>
-          </div>
+      <p className="mt-4 max-w-2xl mx-auto text-slate-600 leading-8">
+        Trusted pediatric guidance to help parents make confident
+        healthcare decisions for their little ones.
+      </p>
+    </div>
 
-          {/* Embla Carousel */}
+    {/* Embla Carousel */}
 
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
+    <div
+      className="overflow-hidden py-4"
+      ref={emblaRef}
+      onMouseEnter={() => autoplay.current?.stop()}
+      onMouseLeave={() => autoplay.current?.play()}
+    >
+      <div className="flex">
 
-              {resources.map((item, index) => {
-                const Icon = item.icon;
+        {resources.map((item, index) => {
+          const Icon = item.icon;
 
-                return (
-                  <div
-                    key={index}
-                    className="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] px-3"
-                  >
-                    <div className="group h-full overflow-hidden rounded-[28px] bg-white shadow-md hover:shadow-2xl transition-all duration-500">
+          return (
+            <div
+              key={index}
+              className="min-w-full sm:min-w-1/2 lg:min-w-1/3 px-3"
+            >
+              <div className="group h-full overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
 
-                      {/* Image */}
+                {/* Image */}
 
-                      <div className="relative h-60 overflow-hidden">
+                <div className="relative h-44 md:h-48 lg:h-52 overflow-hidden">
 
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          fill
-                          sizes="(max-width:768px) 100vw,(max-width:1024px) 50vw,33vw"
-                          className="object-cover transition duration-700 group-hover:scale-105"
-                        />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width:768px) 100vw,(max-width:1024px) 50vw,33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
 
-                      </div>
+                </div>
 
-                      {/* Content */}
+                {/* Content */}
 
-                      <div className="p-7">
+                <div className="p-5 md:p-6">
 
-                        <div className="w-14 h-14 rounded-2xl bg-pink-100 flex items-center justify-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center mb-4">
 
-                          <Icon
-                            className="text-pink-600"
-                            size={26}
-                          />
+                    <Icon
+                      className="text-pink-600"
+                      size={22}
+                    />
 
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-slate-800">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-4 text-slate-600 leading-7">
-                          {item.description}
-                        </p>
-
-                        <button className="mt-6 inline-flex items-center gap-2 font-semibold text-pink-600 hover:gap-3 transition-all">
-
-                          Learn More
-
-                          <ArrowRight size={18} />
-
-                        </button>
-
-                      </div>
-
-                    </div>
                   </div>
-                );
-              })}
 
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-[15px] text-slate-600 leading-6">
+                    {item.description}
+                  </p>
+
+                  <button className="mt-4 inline-flex items-center gap-2 font-semibold text-pink-600 transition-all hover:gap-3">
+
+                    Learn More
+
+                    <ArrowRight size={18} />
+
+                  </button>
+
+                </div>
+
+              </div>
             </div>
-          </div>
+          );
+        })}
 
-        </div>
-      </section>
+      </div>
+    </div>
+
+  </div>
+</section>
             {/* ================= NEWBORN CARE ================= */}
 
       <section className="py-14 md:py-16 bg-[#FFF4F8]">

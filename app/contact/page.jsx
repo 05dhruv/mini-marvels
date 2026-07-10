@@ -28,7 +28,7 @@ export default function ContactPage() {
 
       {/* ================= HERO SECTION ================= */}
 
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="relative pt-24 pb-12 lg:pt-28 lg:pb-16">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
             </span>
 
-            <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900">
+            <h1 className="mt-7 text-3xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-slate-900">
 
               Caring For Every
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
             </h1>
 
-            <p className="mt-7 max-w-2xl mx-auto text-lg leading-8 text-slate-600">
+            <p className="mt-5 max-w-xl mx-auto text-base lg:text-lg leading-7 text-slate-600">
 
               Whether you need an appointment, vaccination guidance,
               newborn care support or general pediatric consultation,
@@ -60,11 +60,11 @@ export default function ContactPage() {
 
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4">
 
               <a
                 href="tel:+919716383830"
-                className="inline-flex items-center rounded-full bg-pink-500 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.35)]"
+                className="inline-flex items-center rounded-full bg-pink-500 px-7 py-3.5 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.35)]"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
               <a
                 href="https://wa.me/919716383830"
-                className="inline-flex items-center rounded-full border-2 border-pink-200 bg-white px-8 py-4 font-semibold text-slate-800 transition-all duration-300 hover:border-pink-500 hover:text-pink-500"
+                className="inline-flex items-center rounded-full border-2 border-pink-200 bg-white px-7 py-3.5 font-semibold text-slate-800 transition-all duration-300 hover:border-pink-500 hover:text-pink-500"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 WhatsApp
@@ -88,7 +88,7 @@ export default function ContactPage() {
 
       {/* ================= CONTACT INFO + FORM ================= */}
 
-      <section className="pb-24">
+      <section className="pb-16">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
             
               {/* ================= LEFT CARD ================= */}
 
-            <div className="rounded-[32px] border border-pink-100 bg-white p-8 lg:p-10 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
+            <div className="rounded-[32px] border border-pink-100 bg-white p-6 lg:p-8 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
 
               <span className="inline-flex rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold text-pink-600">
                 CONTACT DETAILS
@@ -111,11 +111,11 @@ export default function ContactPage() {
                 anytime during clinic hours. We're always happy to help.
               </p>
 
-              <div className="mt-10 space-y-6">
+              <div className="mt-7 space-y-6">
 
                 {/* Address */}
 
-                <div className="group flex items-start gap-5 rounded-2xl border border-pink-100 bg-pink-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
+                <div className="group flex items-start gap-4 rounded-2xl border border-pink-100 bg-pink-50/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
 
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-500 text-white transition-all duration-300 group-hover:scale-110">
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
 
                 {/* Phone */}
 
-                <div className="group flex items-start gap-5 rounded-2xl border border-pink-100 bg-pink-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
+                <div className="group flex items-start gap-4 rounded-2xl border border-pink-100 bg-pink-50/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
 
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-500 text-white transition-all duration-300 group-hover:scale-110">
 
@@ -169,7 +169,7 @@ export default function ContactPage() {
 
                 {/* Email */}
 
-                <div className="group flex items-start gap-5 rounded-2xl border border-pink-100 bg-pink-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
+                <div className="group flex items-start gap-4 rounded-2xl border border-pink-100 bg-pink-50/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
 
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-500 text-white transition-all duration-300 group-hover:scale-110">
 
@@ -196,7 +196,7 @@ export default function ContactPage() {
 
                 {/* Timings */}
 
-                <div className="group flex items-start gap-5 rounded-2xl border border-pink-100 bg-pink-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
+                <div className="group flex items-start gap-4 rounded-2xl border border-pink-100 bg-pink-50/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl">
 
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-pink-500 text-white transition-all duration-300 group-hover:scale-110">
 
@@ -227,7 +227,7 @@ export default function ContactPage() {
             {/* ================= RIGHT SIDE START ================= */}
                         {/* ================= CONTACT FORM ================= */}
 
-            <div className="rounded-[32px] border border-pink-100 bg-white p-8 lg:p-10 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
+            <div className="rounded-[32px] border border-pink-100 bg-white p-6 lg:p-8 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
 
               <span className="inline-flex rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold text-pink-600">
                 SEND MESSAGE
@@ -242,9 +242,9 @@ export default function ContactPage() {
                 soon as possible to schedule your appointment.
               </p>
 
-              <form className="mt-10 space-y-6">
+              <form className="mt-7 space-y-6">
 
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-4">
 
                   <input
                     type="text"
@@ -280,7 +280,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center rounded-full bg-pink-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.30)]"
+                  className="group inline-flex w-full items-center justify-center rounded-full bg-pink-500 px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.30)]"
                 >
                   <Send
                     size={20}
@@ -306,7 +306,7 @@ export default function ContactPage() {
       </section>
 
       {/* ================= CLINIC LOCATION ================= */}
-            <section className="relative pb-12">
+            <section className="relative pb-8">
 
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
@@ -318,7 +318,7 @@ export default function ContactPage() {
               VISIT OUR CLINIC
             </span>
 
-            <h2 className="mt-5 text-4xl lg:text-5xl font-extrabold text-slate-900">
+            <h2 className="mt-5 text-3xl lg:text-4xl font-extrabold text-slate-900">
               We'd Love To
               <span className="block text-pink-500">
                 Welcome You
@@ -335,11 +335,11 @@ export default function ContactPage() {
 
           {/* Cards */}
 
-          <div className="mt-14 grid gap-10 lg:grid-cols-2 items-stretch">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-stretch">
 
             {/* Left Card */}
 
-            <div className="rounded-[32px] border border-pink-100 bg-white p-8 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
+            <div className="rounded-[32px] border border-pink-100 bg-white p-6 shadow-[0_25px_70px_rgba(236,72,153,.12)]">
 
               <h3 className="text-3xl font-extrabold text-slate-900">
                 Mini Marvels Clinic
@@ -351,7 +351,7 @@ export default function ContactPage() {
                 comfortable for both parents and children.
               </p>
 
-              <div className="mt-10 space-y-7">
+              <div className="mt-7 space-y-7">
 
                 <div className="flex gap-4">
 
@@ -428,13 +428,13 @@ export default function ContactPage() {
 
             <div className="relative h-full">
 
-              <div className="absolute -top-5 -left-5 h-full w-full rounded-[32px] bg-pink-100"></div>
+              <div className="absolute -top-4 -left-5 h-full w-full rounded-[32px] bg-pink-100"></div>
 
               <div className="relative h-full overflow-hidden rounded-[32px] border border-pink-100 bg-white shadow-[0_25px_70px_rgba(236,72,153,.15)]">
 
                 <iframe
                    src="https://www.google.com/maps?q=Moradabad,Uttar%20Pradesh&output=embed"
-                   className="w-full h-full min-h-[520px]"
+                   className="w-full h-full min-h-[420px]"
                    loading="lazy"
                    allowFullScreen
                 />
