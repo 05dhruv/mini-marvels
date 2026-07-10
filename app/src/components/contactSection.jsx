@@ -37,7 +37,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-3">
                 <MapPin className="text-pink-500" />
                 <p className="text-sm text-slate-700">
-                  Mini Marvels Clinic, Meerut, Uttar Pradesh
+                  Mini Marvels Clinic, Galshaheed, Moradabad
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function ContactPage() {
             <div className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-3">
                 <Phone className="text-pink-500" />
-                <p className="text-sm text-slate-700">+91 98765 43210</p>
+                <p className="text-sm text-slate-700">+919716383830</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
             <div className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-3">
                 <Mail className="text-pink-500" />
-                <p className="text-sm text-slate-700">contact@minimarvels.com</p>
+                <p className="text-sm text-slate-700">ksana103@gmail.com</p>
               </div>
             </div>
 

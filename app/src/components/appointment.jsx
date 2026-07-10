@@ -57,7 +57,7 @@ export default function AppointmentPage() {
                 </Link>
 
                 <Link
-                  href="tel:+919999999999"
+                  href="tel:+919716383830"
                   className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-7 py-4 font-semibold text-slate-700 hover:border-pink-400 transition"
                 >
                   <Phone className="w-5 h-5" />
@@ -340,7 +340,7 @@ export default function AppointmentPage() {
                       </h4>
 
                       <p className="text-slate-500">
-                        +91 XXXXX XXXXX
+                        +919716383830
                       </p>
                     </div>
 
@@ -382,7 +382,7 @@ export default function AppointmentPage() {
                       <p className="text-slate-500 leading-7">
                         Mini Marvels Child Clinic
                         <br />
-                        Your Complete Address Here
+                        Galshaheed, Moradabad
                       </p>
                     </div>
 

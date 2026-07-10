@@ -138,48 +138,61 @@ export default function Footer() {
 
             </div>
 
-            {/* Our Services */}
+{/* Our Services */}
 
-            <div>
+<div>
 
-              <h4 className="text-lg font-bold text-white">
+  <h4 className="text-lg font-bold text-white">
+    Our Services
+  </h4>
 
-                Our Services
+  <div className="mt-6 flex flex-col gap-4">
 
-              </h4>
+    <Link
+      href="/services/child-checkups"
+      className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400"
+    >
+      <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
+      Child Checkups
+    </Link>
 
-              <div className="mt-6 flex flex-col gap-4">
+    <Link
+      href="/services/growth-monitoring"
+      className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400"
+    >
+      <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
+      Growth Monitoring
+    </Link>
 
-                <p className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400 cursor-pointer">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Newborn Care
-                </p>
+    <Link
+      href="/services/newborn-care"
+      className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400"
+    >
+      <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
+      Newborn Care
+    </Link>
 
-                <p className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400 cursor-pointer">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Vaccination
-                </p>
+    <Link
+      href="/services/nutrition-advice"
+      className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400"
+    >
+      <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
+      Nutrition Advice
+    </Link>
 
-                <p className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400 cursor-pointer">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Child Checkups
-                </p>
+    <Link
+      href="/services/vaccination"
+      className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400"
+    >
+      <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
+      Vaccination
+    </Link>
 
-                <p className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400 cursor-pointer">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Growth Monitoring
-                </p>
+  </div>
 
-                <p className="group flex items-center text-slate-300 transition-all duration-300 hover:text-cyan-400 cursor-pointer">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-cyan-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Nutrition Advice
-                </p>
+</div>
 
-              </div>
-
-            </div>
-
-            {/* Contact Starts Below */}            {/* Contact */}
+           {/* Contact */}
 
             <div>
 
@@ -208,10 +221,10 @@ export default function Footer() {
                     </p>
 
                     <a
-                      href="tel:+919999999999"
+                      href="tel:+919716383830"
                       className="transition-colors duration-300 hover:text-pink-400"
                     >
-                      +91 99999 99999
+                      +919716383830
                     </a>
 
                   </div>
@@ -235,10 +248,10 @@ export default function Footer() {
                     </p>
 
                     <a
-                      href="mailto:info@minimarvels.com"
+                      href="mailto:ksana103@gmail.com"
                       className="transition-colors duration-300 hover:text-cyan-400"
                     >
-                      info@minimarvels.com
+                      ksana103@gmail.com
                     </a>
 
                   </div>
@@ -263,9 +276,9 @@ export default function Footer() {
 
                     <p className="leading-7 text-slate-300">
 
-                      Your Clinic Address,
+                      Galshaheed,
                       <br />
-                      Your City, India
+                      Moradabad, Uttar Pradesh
 
                     </p>
 
@@ -330,7 +343,7 @@ export default function Footer() {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://wa.me/919716383830"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-green-500"
                   >
                     <MessageCircle size={20} />

@@ -71,7 +71,7 @@ useEffect(() => {
           </Link>
 
           <a
-            href="tel:+919876543210"
+            href="tel:+919716383830"
             className="flex items-center justify-center gap-2 border border-slate-200 py-3 rounded-full text-slate-700 font-medium hover:bg-slate-50 transition"
           >
             <Phone className="h-4 w-4" />

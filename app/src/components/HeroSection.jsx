@@ -158,7 +158,7 @@ export default function HeroSection() {
               </Link>
 
               <Link
-                href="#"
+                href="https://www.instagram.com/dr.minimarvels?igsh=MXYxM3BpZDRqNWhhNA=="
                 className="inline-flex items-center justify-center rounded-xl border-2 border-pink-200 bg-white hover:border-pink-500 text-slate-700 font-semibold px-8 py-4 transition-all duration-300"
               >
                 <Play
@@ -172,7 +172,8 @@ export default function HeroSection() {
 
             </div>
 
-          </div>          {/* RIGHT IMAGE */}
+          </div>         
+           {/* RIGHT IMAGE */}
 
           <div className="relative order-1 lg:order-2 flex items-center justify-center">
 

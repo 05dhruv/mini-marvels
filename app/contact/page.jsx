@@ -63,7 +63,7 @@ export default function ContactPage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
 
               <a
-                href="tel:+917900903333"
+                href="tel:+919716383830"
                 className="inline-flex items-center rounded-full bg-pink-500 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:shadow-[0_20px_40px_rgba(236,72,153,.35)]"
               >
                 <Phone className="mr-2 h-5 w-5" />
@@ -71,7 +71,7 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="https://wa.me/917900903333"
+                href="https://wa.me/919716383830"
                 className="inline-flex items-center rounded-full border-2 border-pink-200 bg-white px-8 py-4 font-semibold text-slate-800 transition-all duration-300 hover:border-pink-500 hover:text-pink-500"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -132,7 +132,7 @@ export default function ContactPage() {
                     <p className="mt-2 text-slate-600 leading-7">
                       Mini Marvels Child Care Clinic
                       <br />
-                      Moradabad,
+                      Galshaheed, Moradabad,
                       Uttar Pradesh
                     </p>
 
@@ -157,10 +157,10 @@ export default function ContactPage() {
                     </h3>
 
                     <a
-                      href="tel:+917900903333"
+                      href="tel:+919716383830"
                       className="mt-2 block text-xl font-bold text-pink-500 hover:text-pink-600 transition"
                     >
-                      +91 79009 03333
+                      +919716383830
                     </a>
 
                   </div>
@@ -184,10 +184,10 @@ export default function ContactPage() {
                     </h3>
 
                     <a
-                      href="mailto:info@drsanaibadkhan.com"
+                      href="mailto:ksana103@gmail.com"
                       className="mt-2 block text-pink-500 hover:text-pink-600 break-all"
                     >
-                      info@drsanaibadkhan.com
+                      ksana103@gmail.com
                     </a>
 
                   </div>
@@ -388,10 +388,10 @@ export default function ContactPage() {
                     </h4>
 
                     <a
-                      href="tel:+917900903333"
+                      href="tel:+919716383830"
                       className="mt-1 block font-semibold text-pink-500 hover:text-pink-600"
                     >
-                      +91 79009 03333
+                      +919716383830
                     </a>
 
                   </div>

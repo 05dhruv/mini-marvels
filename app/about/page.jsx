@@ -140,7 +140,7 @@ export default function AboutPage() {
 
       </section>
 
-      {/* ====== PART 2 CONTINUES FROM HERE ====== */}      {/* ================= CLINIC STORY ================= */}
+   {/* ================= CLINIC STORY ================= */}
 
       <section className="relative max-w-7xl mx-auto px-5 lg:px-8 py-12">
 
@@ -168,13 +168,13 @@ export default function AboutPage() {
             </div>
 
             {/* Floating Card 1 */}
-            <div className="absolute -bottom-6 left-6 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-100 shadow-xl px-5 py-4">
+            <div className="absolute -bottom-7 left-1 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-100 shadow-xl px-5 py-4">
 
               <div className="flex items-center gap-3">
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-pink-100">
 
-                  <Heart className="h-6 w-6 text-pink-500 fill-pink-500" />
+                  <Heart className="h-4 w-4 text-pink-500 fill-pink-500" />
 
                 </div>
 
@@ -195,13 +195,13 @@ export default function AboutPage() {
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute top-6 -right-5 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-100 shadow-xl px-5 py-4 hidden sm:block">
+            <div className="absolute top-0 -right-10 rounded-2xl bg-white/95 backdrop-blur-xl border border-slate-100 shadow-xl px-5 py-4 hidden sm:block">
 
               <div className="flex items-center gap-3">
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-100">
+                <div className="flex h-5 w-5 items-center justify-center rounded-xl bg-cyan-100">
 
-                  <ShieldCheck className="h-6 w-6 text-cyan-600" />
+                  <ShieldCheck className="h-4 w-4 text-cyan-600" />
 
                 </div>
 
@@ -304,7 +304,7 @@ export default function AboutPage() {
 
       </section>
 
-      {/* ===== PART 3 CONTINUES FROM HERE ===== */}      {/* ================= DOCTOR SECTION ================= */}
+           {/* ================= DOCTOR SECTION ================= */}
 
       <section className="relative max-w-7xl mx-auto px-5 lg:px-8 py-14">
 
@@ -354,19 +354,19 @@ export default function AboutPage() {
 
           <div>
 
-            <span className="inline-flex rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">
+            <span className="inline-flex rounded-full bg-cyan-100 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-cyan-700">
 
               MEET OUR DOCTOR
 
             </span>
 
-            <h2 className="mt-5 text-3xl lg:text-4xl font-extrabold leading-tight text-slate-900">
+            <h2 className="mt-5 text-3xl lg:text-3xl font-extrabold leading-tight text-slate-900">
 
-              Caring Beyond
+              Dr. Sana Ibad Khan
 
               <span className="block text-pink-500">
 
-                Every Consultation
+                Meet Our Doctor Every Consultation
 
               </span>
 
@@ -552,51 +552,79 @@ export default function AboutPage() {
 
       </section>
 
-      {/* ================= STATS ================= */}
+{/* ================= STATS ================= */}
 
-      <section className="relative py-12">
+<section className="relative hidden lg:block py-8">
 
-        <div className="max-w-6xl mx-auto px-5 lg:px-8">
+  <div className="max-w-5xl mx-auto px-4 lg:px-6">
 
-          <div className="rounded-[36px] bg-gradient-to-r from-pink-500 via-pink-400 to-cyan-400 p-10 text-white shadow-2xl">
+    <div className="rounded-[24px] bg-gradient-to-r from-pink-500 via-pink-400 to-cyan-400 p-6 shadow-xl">
 
-            <div className="grid gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-4 gap-5 text-center text-white">
 
-              <div>
-                <h3 className="text-4xl font-black">5000+</h3>
-                <p className="mt-2 text-sm uppercase tracking-widest">
-                  Happy Families
-                </p>
-              </div>
+        {/* Stat 1 */}
 
-              <div>
-                <h3 className="text-4xl font-black">10+</h3>
-                <p className="mt-2 text-sm uppercase tracking-widest">
-                  Years of Care
-                </p>
-              </div>
+        <div>
 
-              <div>
-                <h3 className="text-4xl font-black">24×7</h3>
-                <p className="mt-2 text-sm uppercase tracking-widest">
-                  Parent Support
-                </p>
-              </div>
+          <h3 className="text-3xl font-extrabold">
+            5000+
+          </h3>
 
-              <div>
-                <h3 className="text-4xl font-black">100%</h3>
-                <p className="mt-2 text-sm uppercase tracking-widest">
-                  Child Focused
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/90">
+            Happy Families
+          </p>
 
         </div>
 
-      </section>
+        {/* Stat 2 */}
+
+        <div>
+
+          <h3 className="text-3xl font-extrabold">
+            10+
+          </h3>
+
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/90">
+            Years of Care
+          </p>
+
+        </div>
+
+        {/* Stat 3 */}
+
+        <div>
+
+          <h3 className="text-3xl font-extrabold">
+            24×7
+          </h3>
+
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/90">
+            Parent Support
+          </p>
+
+        </div>
+
+        {/* Stat 4 */}
+
+        <div>
+
+          <h3 className="text-3xl font-extrabold">
+            100%
+          </h3>
+
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/90">
+            Child Focused
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ================= END CTA ================= */}
 

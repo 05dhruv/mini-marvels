@@ -2,34 +2,89 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
 import {
+  ChevronLeft,
   ChevronRight,
+  ArrowRight,
   Heart,
+  Baby,
   ShieldCheck,
   Stethoscope,
-  Baby,
-  ArrowRight,
+  Apple,
 } from "lucide-react";
 
 export default function ServicesPage() {
+  const autoplay = useRef(
+  Autoplay({
+    delay: 3000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+  })
+);
+
+const [emblaRef, emblaApi] = useEmblaCarousel(
+  {
+    loop: true,
+    align: "start",
+    skipSnaps: false,
+  },
+  [autoplay.current]
+);
+
+const [selectedIndex, setSelectedIndex] = useState(0);
+const [scrollSnaps, setScrollSnaps] = useState([]);
+
+const scrollPrev = useCallback(() => {
+  emblaApi?.scrollPrev();
+}, [emblaApi]);
+
+const scrollNext = useCallback(() => {
+  emblaApi?.scrollNext();
+}, [emblaApi]);
+
+const scrollTo = useCallback(
+  (index) => emblaApi?.scrollTo(index),
+  [emblaApi]
+);
+
+const onSelect = useCallback(() => {
+  if (!emblaApi) return;
+
+  setSelectedIndex(emblaApi.selectedScrollSnap());
+}, [emblaApi]);
+
+useEffect(() => {
+  if (!emblaApi) return;
+
+  setScrollSnaps(emblaApi.scrollSnapList());
+
+  onSelect();
+
+  emblaApi.on("select", onSelect);
+  emblaApi.on("reInit", onSelect);
+
+  return () => {
+    emblaApi.off("select", onSelect);
+    emblaApi.off("reInit", onSelect);
+  };
+}, [emblaApi, onSelect]);
+
   return (
     <main className="relative overflow-hidden bg-gradient-to-b from-[#fffefe] via-[#fff8fb] to-[#f6fbff]">
-
       {/* Background Effects */}
-
       <div className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full bg-pink-200/40 blur-3xl"></div>
-
       <div className="absolute top-1/4 -right-28 h-[26rem] w-[26rem] rounded-full bg-cyan-200/40 blur-3xl"></div>
-
       <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-pink-100/40 blur-3xl"></div>
-
       {/* ====================================================== */}
       {/* HERO SECTION */}
       {/* ====================================================== */}
-
-      <section className="relative max-w-7xl mx-auto px-5 lg:px-8 pt-32 lg:pt-40 pb-16">
-
-        {/* Breadcrumb */}
+      <section className="relative max-w-6xl mx-auto px-5 lg:px-8 pt-24 lg:pt-28 pb-10">
+       {/* Breadcrumb */}
 
         <div className="flex items-center justify-center gap-2 text-sm text-slate-500">
 
@@ -50,7 +105,7 @@ export default function ServicesPage() {
 
         {/* Small Badge */}
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-5 flex justify-center">
 
           <span className="inline-flex items-center gap-2 rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-pink-600">
 
@@ -64,7 +119,7 @@ export default function ServicesPage() {
 
         {/* Heading */}
 
-        <h1 className="mx-auto mt-6 max-w-5xl text-center text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-slate-900">
+        <h1 className="mx-auto mt-4 max-w-5xl text-center text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-slate-900">
 
           Comprehensive Healthcare
 
@@ -78,7 +133,7 @@ export default function ServicesPage() {
 
         {/* Intro */}
 
-        <p className="mx-auto mt-6 max-w-4xl text-center text-base sm:text-lg lg:text-xl leading-8 text-slate-600">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm sm:text-base lg:text-lg leading-7 text-slate-600">
 
           From newborn care to preventive healthcare,
           our pediatric services are thoughtfully designed
@@ -90,7 +145,7 @@ export default function ServicesPage() {
 
         {/* HERO IMAGE */}
 
-        <div className="relative mt-14">
+        <div className="relative mt-8">
 
           {/* Decorative Glow */}
 
@@ -100,14 +155,14 @@ export default function ServicesPage() {
 
           {/* Main Image */}
 
-          <div className="relative overflow-hidden rounded-[34px] border border-white/60 bg-white shadow-[0_30px_70px_rgba(0,0,0,0.12)]">
+          <div className="relative overflow-hidden rounded-[24px] border border-white/60 bg-white shadow-[0_30px_70px_rgba(0,0,0,0.12)]">
 
             <Image
               src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783337913/images_y8adha.jpg"
               alt="Mini Marvels Services"
               width={1500}
               height={900}
-              className="h-[260px] sm:h-[380px] lg:h-[520px] w-full object-cover transition duration-700 hover:scale-105"
+              className="h-[220px] sm:h-[300px] lg:h-[420px] w-full object-cover transition duration-700 hover:scale-105"
             />
 
             {/* Gradient Overlay */}
@@ -184,11 +239,11 @@ export default function ServicesPage() {
 
             {/* Trust Highlights */}
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
 
           {/* Card 1 */}
 
-          <div className="group rounded-3xl border border-pink-100/70 bg-white/80 backdrop-blur-xl p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <div className="group rounded-3xl border border-pink-100/70 bg-white/80 backdrop-blur-xl p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-100 transition group-hover:scale-110">
 
@@ -196,11 +251,11 @@ export default function ServicesPage() {
 
             </div>
 
-            <h3 className="mt-6 text-xl font-bold text-slate-900">
+            <h3 className="mt-4 text-xl font-bold text-slate-900">
               Compassionate Care
             </h3>
 
-            <p className="mt-3 text-sm leading-7 text-slate-600">
+            <p className="mt-3 text-sm leading-6 text-slate-600">
               Every child receives personalized attention in a warm,
               comforting and child-friendly environment designed to reduce
               anxiety and build trust.
@@ -255,24 +310,24 @@ export default function ServicesPage() {
 
         {/* Quick Stats */}
 
-        <div className="mt-14 rounded-[32px] border border-white/60 bg-white/80 backdrop-blur-xl p-8 shadow-lg">
+        <div className="hidden lg:block mt-6 rounded-2xl border border-white/60 bg-white/80 backdrop-blur-xl p-5 shadow-md">
 
-          <div className="grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
+          <div className="grid grid-cols-4 gap-4 text-center">
 
             <div>
-              <h3 className="text-4xl font-black text-pink-500">
+              <h3 className="text-3xl font-extrabold text-pink-500">
                 5000+
               </h3>
-              <p className="mt-2 text-sm font-medium text-slate-600">
+              <p className="mt-1 text-xs font-medium text-slate-600">
                 Happy Families
               </p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-black text-cyan-500">
+              <h3 className="text-3xl font-extrabold text-cyan-500">
                 10+
               </h3>
-              <p className="mt-2 text-sm font-medium text-slate-600">
+              <p className="mt-1 text-xs font-medium text-slate-600">
                 Years Experience
               </p>
             </div>
@@ -281,7 +336,7 @@ export default function ServicesPage() {
               <h3 className="text-4xl font-black text-pink-500">
                 24×7
               </h3>
-              <p className="mt-2 text-sm font-medium text-slate-600">
+              <p className="mt-1 text-xs font-medium text-slate-600">
                 Parent Guidance
               </p>
             </div>
@@ -290,7 +345,7 @@ export default function ServicesPage() {
               <h3 className="text-4xl font-black text-cyan-500">
                 100%
               </h3>
-              <p className="mt-2 text-sm font-medium text-slate-600">
+              <p className="mt-1 text-xs font-medium text-slate-600">
                 Child Focused
               </p>
             </div>
@@ -304,9 +359,8 @@ export default function ServicesPage() {
       {/* OUR PEDIATRIC SERVICES */}
       {/* ====================================================== */}
 
-      <section className="relative py-16 lg:py-20">
-
-        <div className="max-w-7xl mx-auto px-5 lg:px-8">
+      <section className="relative py-10 lg:py-12 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
           {/* Section Heading */}
 
@@ -317,13 +371,10 @@ export default function ServicesPage() {
             </span>
 
             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
-
               Complete Pediatric Care
-
               <span className="block text-pink-500">
                 Under One Roof
               </span>
-
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl text-base sm:text-lg leading-8 text-slate-600">
@@ -334,423 +385,183 @@ export default function ServicesPage() {
 
           </div>
 
-          {/* Services Grid */}
+          {/* ================= Embla Carousel ================= */}
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2">
+          <div className="relative mt-10">
 
-            {/* ================================================= */}
+            <div className="overflow-hidden" ref={emblaRef}>
 
-            {/* General Consultation */}
+              <div className="flex">
 
-            {/* ================================================= */}
+                {[
+                  {
+                    title: "Child Checkups",
+                    href: "/services/child-checkups",
+                    image:
+                      "https://res.cloudinary.com/dv9tivfvq/image/upload/v1783279773/IMG_20260706_004402.jpg_p0gij1.jpg",
+                    icon: (
+                      <Stethoscope className="h-6 w-6 text-pink-600" />
+                    ),
+                    iconBg: "bg-pink-100",
+                    description:
+                      "Comprehensive pediatric consultations for common illnesses, developmental concerns and routine health evaluations."
+                  },
 
-            <div className="group overflow-hidden rounded-[28px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
+                  {
+                    title: "Growth Monitoring",
+                    href: "/services/growth-monitoring",
+                    image:
+                      "https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335974/875222c84eb5034561ac5dccb6697279_khu5lb.jpg",
+                    icon: (
+                      <Heart className="h-6 w-6 text-emerald-600" />
+                    ),
+                    iconBg: "bg-emerald-100",
+                    description:
+                      "Regular monitoring of height, weight, nutrition and developmental milestones for healthy childhood growth."
+                  },
 
-              <div className="overflow-hidden">
+                  {
+                    title: "Newborn Care",
+                    href: "/services/newborn-care",
+                    image:
+                      "https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335944/4e664d00863584c432c0ab22d5917e17_tzealo.jpg",
+                    icon: (
+                      <Baby className="h-6 w-6 text-yellow-600" />
+                    ),
+                    iconBg: "bg-yellow-100",
+                    description:
+                      "Gentle newborn assessments, feeding guidance, jaundice monitoring and complete newborn support."
+                  },
 
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783279773/IMG_20260706_004402.jpg_p0gij1.jpg"
-                  alt="General Consultation"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
+                  {
+                    title: "Nutrition Advice",
+                    href: "/services/nutrition-advice",
+                    image:
+                      "https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335957/s7_zvmwmv.jpg",
+                    icon: (
+                      <Apple className="h-6 w-6 text-orange-600" />
+                    ),
+                    iconBg: "bg-orange-100",
+                    description:
+                      "Personalized nutrition advice, meal planning and feeding guidance for healthy development."
+                  },
 
-              </div>
+                  {
+                    title: "Vaccination",
+                    href: "/services/vaccination",
+                    image:
+                      "https://res.cloudinary.com/dv9tivfvq/image/upload/v1783244825/IMG_20260701_213817.jpg_o3vvy9.jpg",
+                    icon: (
+                      <ShieldCheck className="h-6 w-6 text-cyan-600" />
+                    ),
+                    iconBg: "bg-cyan-100",
+                    description:
+                      "Complete vaccination schedules following recommended immunization guidelines."
+                  }
 
-              <div className="p-7">
+                ].map((service, index) => (
+                                    <div
+                    key={index}
+                    className="min-w-0 flex-[0_0_88%] px-2 sm:flex-[0_0_50%] lg:flex-[0_0_40%] xl:flex-[0_0_31%]"
+                  >
+                    <Link href={service.href} className="block h-full">
 
-                <div className="flex items-center gap-3">
+                      <div className="group h-full overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
-                  <div className="rounded-xl bg-pink-100 p-3">
-                    <Stethoscope className="h-6 w-6 text-pink-600" />
+                        {/* Image */}
+
+                        <div className="relative overflow-hidden">
+
+                          <Image
+                            src={service.image}
+                            alt={service.title}
+                            width={700}
+                            height={500}
+                            className="h-40 md:h-44 lg:h-48 w-full object-cover transition duration-700 group-hover:scale-110"
+                          />
+
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+
+                        </div>
+
+                        {/* Content */}
+
+                        <div className="p-4">
+
+                          <div className="flex items-center gap-4">
+
+                            <div
+                              className={`rounded-xl p-3 ${service.iconBg}`}
+                            >
+                              {service.icon}
+                            </div>
+
+                            <h3 className="text-lg lg:text-xl2 font-bold text-slate-900 transition-colors duration-300 group-hover:text-pink-500">
+                              {service.title}
+                            </h3>
+
+                          </div>
+
+                          <p className="mt-3 text-sm leading-6 text-slate-600">
+                            {service.description}
+                          </p>
+
+                          <div className="mt-4 flex items-center justify-between">
+
+                            <span className="inline-flex items-center rounded-full bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-600 transition duration-300 group-hover:bg-pink-500 group-hover:text-white">
+                              Learn More
+                            </span>
+
+                            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
+                              <ChevronRight className="h-5 w-5" />
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </Link>
+
                   </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    General Consultation
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Comprehensive pediatric consultations for common illnesses,
-                  developmental concerns and routine health evaluations,
-                  ensuring accurate diagnosis and personalized treatment.
-                </p>
-
+                ))}
               </div>
-
             </div>
-
-            {/* ================================================= */}
-
-            {/* Vaccination */}
-
-            {/* ================================================= */}
-
-            <div className="group overflow-hidden rounded-[28px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
-
-              <div className="overflow-hidden">
-
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783244825/IMG_20260701_213817.jpg_o3vvy9.jpg"
-                  alt="Vaccination"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-
-              </div>
-
-              <div className="p-7">
-
-                <div className="flex items-center gap-3">
-
-                  <div className="rounded-xl bg-cyan-100 p-3">
-                    <ShieldCheck className="h-6 w-6 text-cyan-600" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    Vaccination & Immunization
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Complete vaccination schedules following recommended
-                  immunization guidelines to protect children from
-                  preventable diseases.
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* ================================================= */}
-
-            {/* Newborn Care */}
-
-            {/* ================================================= */}
-
-            <div className="group overflow-hidden rounded-[28px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
-
-              <div className="overflow-hidden">
-
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335944/4e664d00863584c432c0ab22d5917e17_tzealo.jpg"
-                  alt="Newborn Care"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-
-              </div>
-
-              <div className="p-7">
-
-                <div className="flex items-center gap-3">
-
-                  <div className="rounded-xl bg-yellow-100 p-3">
-                    <Baby className="h-6 w-6 text-yellow-600" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    Newborn Care
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Gentle newborn assessments, feeding guidance,
-                  jaundice monitoring and complete support for
-                  healthy early development.
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* ================================================= */}
-
-            {/* Growth Monitoring */}
-
-            {/* ================================================= */}
-
-            <div className="group overflow-hidden rounded-[28px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
-
-              <div className="overflow-hidden">
-
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335974/875222c84eb5034561ac5dccb6697279_khu5lb.jpg"
-                  alt="Growth Monitoring"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-
-              </div>
-
-              <div className="p-7">
-
-                <div className="flex items-center gap-3">
-
-                  <div className="rounded-xl bg-emerald-100 p-3">
-                    <Heart className="h-6 w-6 text-emerald-600" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    Growth Monitoring
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Regular monitoring of height, weight, nutrition,
-                  milestones and overall physical development for
-                  healthy childhood growth.
-                </p>
-
-              </div>
-
-            </div>
-
-                        {/* ================================================= */}
-            {/* Nutrition Counseling */}
-            {/* ================================================= */}
-
-            <div className="group overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-
-              <div className="overflow-hidden">
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783335957/s7_zvmwmv.jpg"
-                  alt="Nutrition Counseling"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-              </div>
-
-              <div className="p-7">
-
-                <div className="flex items-center gap-3">
-
-                  <div className="rounded-xl bg-orange-100 p-3">
-                    <Heart className="h-6 w-6 text-orange-600" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    Nutrition Counseling
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Personalized nutrition advice, healthy meal planning
-                  and feeding guidance to support proper physical and
-                  mental development.
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* ================================================= */}
-            {/* Fever & Infection Care */}
-            {/* ================================================= */}
-
-            <div className="group overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-
-              <div className="overflow-hidden">
-                <Image
-                  src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783336125/doctor-thermometer-and-parent-with-child-in-bedroom-for-healthcare-sick-and-fever-check-illness-temperature-and-influenza-symptoms-with-girl-in-family-home-for-disease-infection-and-pediatrician-photo_c0fj84.jpg"
-                  alt="Fever & Infection Care"
-                  width={700}
-                  height={500}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-              </div>
-
-              <div className="p-7">
-
-                <div className="flex items-center gap-3">
-
-                  <div className="rounded-xl bg-red-100 p-3">
-                    <ShieldCheck className="h-6 w-6 text-red-500" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    Fever & Infection Care
-                  </h3>
-
-                </div>
-
-                <p className="mt-5 leading-7 text-slate-600">
-                  Early diagnosis and effective treatment for fever,
-                  viral infections, allergies and common childhood
-                  illnesses with compassionate care.
-                </p>
-
-              </div>
-
-            </div>
-
+                        {/* Previous Button */}
+
+            <button
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-white p-3 shadow-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500 hover:text-white lg:flex"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            {/* Next Button */}
+
+            <button
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-white p-3 shadow-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500 hover:text-white lg:flex"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
 
           </div>
 
-        </div>
-
-      </section>
-
-            {/* ====================================================== */}
-      {/* WHY CHOOSE MINI MARVELS */}
-      {/* ====================================================== */}
-
-      <section className="relative py-16 lg:py-20 overflow-hidden">
-
-        {/* Background Glow */}
-
-        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-pink-100/40 blur-3xl"></div>
-
-        <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-cyan-100/40 blur-3xl"></div>
-
-        <div className="relative max-w-7xl mx-auto px-5 lg:px-8">
-
-          {/* Heading */}
-
-          <div className="text-center">
-
-            <span className="inline-flex rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-pink-600">
-
-              WHY CHOOSE US
-
-            </span>
-
-            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
-
-              Caring Beyond
-
-              <span className="block text-pink-500">
-
-                Every Consultation
-
-              </span>
-
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl text-base sm:text-lg leading-8 text-slate-600">
-
-              We combine modern pediatric expertise with compassionate
-              care to create a safe, friendly and reassuring experience
-              for both children and parents.
-
-            </p>
-
-          </div>
-
-          {/* Features */}
-
-          <div className="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
-
-            {/* Feature 1 */}
-
-            <div className="group rounded-[28px] border border-pink-100 bg-white/80 backdrop-blur-xl p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
-
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-pink-100 transition duration-300 group-hover:scale-110">
-
-                <Heart className="h-8 w-8 fill-pink-500 text-pink-500" />
-
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold text-slate-900">
-
-                Child Friendly Care
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-600">
-
-                Every consultation is designed to keep children relaxed,
-                comfortable and stress-free throughout their visit.
-
-              </p>
-
-            </div>
-
-            {/* Feature 2 */}
-
-            <div className="group rounded-[28px] border border-cyan-100 bg-white/80 backdrop-blur-xl p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
-
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-100 transition duration-300 group-hover:scale-110">
-
-                <ShieldCheck className="h-8 w-8 text-cyan-600" />
-
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold text-slate-900">
-
-                Safe Treatments
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-600">
-
-                Evidence-based treatments and preventive healthcare
-                focused on your child's long-term wellness.
-
-              </p>
-
-            </div>
-
-            {/* Feature 3 */}
-
-            <div className="group rounded-[28px] border border-emerald-100 bg-white/80 backdrop-blur-xl p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
-
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 transition duration-300 group-hover:scale-110">
-
-                <Stethoscope className="h-8 w-8 text-emerald-600" />
-
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold text-slate-900">
-
-                Expert Guidance
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-600">
-
-                Personalized medical advice that supports healthy
-                growth, nutrition and child development.
-
-              </p>
-
-            </div>
-
-            {/* Feature 4 */}
-
-            <div className="group rounded-[28px] border border-yellow-100 bg-white/80 backdrop-blur-xl p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
-
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-100 transition duration-300 group-hover:scale-110">
-
-                <Baby className="h-8 w-8 text-yellow-600" />
-
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold text-slate-900">
-
-                Complete Child Care
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-600">
-
-                From newborn care to adolescence, every stage of
-                childhood is supported with dedicated medical care.
-
-              </p>
-
-            </div>
-
+          {/* Dots */}
+
+          <div className="mt-6 flex items-center justify-center gap-3">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  index === selectedIndex
+                    ? "w-10 bg-pink-500"
+                    : "w-3 bg-slate-300 hover:bg-pink-300"
+                }`}
+              />
+            ))}
           </div>
 
         </div>
@@ -761,9 +572,9 @@ export default function ServicesPage() {
       {/* OUR CARE JOURNEY */}
       {/* ====================================================== */}
 
-      <section className="relative py-16 lg:py-20 bg-gradient-to-b from-[#fff8fb] to-[#f7fbff] overflow-hidden">
+      <section className="relative py-10 lg:py-12 bg-gradient-to-b from-[#fff8fb] to-[#f7fbff] overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
           {/* Heading */}
 
@@ -789,13 +600,13 @@ export default function ServicesPage() {
 
           {/* Timeline */}
 
-          <div className="relative mt-16">
+          <div className="relative mt-6 md:mt-8">
 
             {/* Line */}
 
             <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 rounded-full bg-pink-100 lg:block"></div>
 
-            <div className="grid gap-8 lg:grid-cols-4">
+            <div className="grid gap-5 lg:grid-cols-4">
 
               {[
                 {
@@ -821,69 +632,23 @@ export default function ServicesPage() {
               ].map((step) => (
                 <div
                   key={step.number}
-                  className="relative rounded-[28px] border border-slate-100 bg-white p-8 text-center shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+                  className="relative rounded-[28px] border border-slate-100 bg-white p-5 text-center shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
                 >
 
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-2xl font-black text-white shadow-lg">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-pink-500 text-2xl font-black text-white shadow-lg">
                     {step.number}
                   </div>
 
-                  <h3 className="mt-6 text-xl font-bold text-slate-900">
+                  <h3 className="mt-4 text-xl font-bold text-slate-900">
                     {step.title}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-slate-600">
+                  <p className="mt-2 leading-7 text-slate-600">
                     {step.text}
                   </p>
 
                 </div>
               ))}
-
-            </div>
-
-          </div>
-
-          {/* Bottom Stats */}
-
-          <div className="mt-20 rounded-[34px] bg-white p-10 shadow-xl border border-slate-100">
-
-            <div className="grid gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
-
-              <div>
-                <h3 className="text-5xl font-black text-pink-500">
-                  5000+
-                </h3>
-                <p className="mt-3 text-slate-600 font-medium">
-                  Happy Families
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-5xl font-black text-cyan-500">
-                  10+
-                </h3>
-                <p className="mt-3 text-slate-600 font-medium">
-                  Years of Care
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-5xl font-black text-pink-500">
-                  98%
-                </h3>
-                <p className="mt-3 text-slate-600 font-medium">
-                  Parent Satisfaction
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-5xl font-black text-cyan-500">
-                  24×7
-                </h3>
-                <p className="mt-3 text-slate-600 font-medium">
-                  Care Guidance
-                </p>
-              </div>
 
             </div>
 
@@ -897,7 +662,7 @@ export default function ServicesPage() {
       {/* PREMIUM CTA SECTION */}
       {/* ====================================================== */}
 
-      <section className="relative overflow-hidden py-16 lg:py-20">
+      <section className="relative overflow-hidden py-10 lg:py-14">
 
         {/* Background Glow */}
 
@@ -905,15 +670,15 @@ export default function ServicesPage() {
 
         <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-cyan-200/30 blur-3xl"></div>
 
-        <div className="relative max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="relative max-w-6xl mx-auto px-4 lg:px-6">
 
-          <div className="overflow-hidden rounded-[36px] bg-gradient-to-br from-pink-500 via-pink-400 to-cyan-400 shadow-[0_30px_80px_rgba(236,72,153,0.25)]">
+          <div className="overflow-hidden rounded-[24px] lg:rounded-[30px] bg-gradient-to-br from-pink-500 via-pink-400 to-cyan-400 shadow-[0_15px_45px_rgba(236,72,153,0.18)]">
 
             <div className="grid items-center lg:grid-cols-2">
 
               {/* Clinic Image */}
 
-              <div className="relative h-[320px] lg:h-[520px] overflow-hidden">
+              <div className="relative h-[180px] sm:h-[220px] lg:h-[340px] overflow-hidden">
 
                 <Image
                   src="https://res.cloudinary.com/dv9tivfvq/image/upload/v1783334476/60e813dad251b6a41a814438fc1ea03e_xbfxbc.jpg"
@@ -929,15 +694,15 @@ export default function ServicesPage() {
 
               {/* CTA Content */}
 
-              <div className="relative p-8 sm:p-12 lg:p-16 text-white">
+              <div className="relative p-5 sm:p-7 lg:p-10 text-white">
 
-                <span className="inline-flex rounded-full border border-white/30 bg-white/15 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] backdrop-blur-xl">
+                <span className="inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] backdrop-blur-xl">
 
                   MINI MARVELS CLINIC
 
                 </span>
 
-                <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+                <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-black leading-tight">
 
                   Your Child Deserves
 
@@ -949,7 +714,7 @@ export default function ServicesPage() {
 
                 </h2>
 
-                <p className="mt-6 text-base sm:text-lg leading-8 text-white/90">
+                <p className="mt-4 text-sm sm:text-base leading-6 sm:leading-7 text-white/90">
 
                   From routine check-ups to specialized pediatric care,
                   we're committed to providing a safe, caring and
@@ -959,17 +724,17 @@ export default function ServicesPage() {
 
                 {/* Feature Chips */}
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-5 flex flex-wrap gap-2">
 
-                  <span className="rounded-full bg-white/15 px-5 py-2 text-sm backdrop-blur-xl">
+                  <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs backdrop-blur-xl">
                     ✓ Child-Friendly Environment
                   </span>
 
-                  <span className="rounded-full bg-white/15 px-5 py-2 text-sm backdrop-blur-xl">
+                  <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs backdrop-blur-xl">
                     ✓ Experienced Pediatrician
                   </span>
 
-                  <span className="rounded-full bg-white/15 px-5 py-2 text-sm backdrop-blur-xl">
+                  <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs backdrop-blur-xl">
                     ✓ Trusted Healthcare
                   </span>
 
@@ -977,11 +742,11 @@ export default function ServicesPage() {
 
                 {/* CTA Button */}
 
-                <div className="mt-10">
+                <div className="mt-6">
 
                   <Link
                     href="/appointment"
-                    className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-pink-600 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                    className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-pink-600 shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     Book Appointment
 
@@ -999,7 +764,7 @@ export default function ServicesPage() {
 
           {/* Bottom Note */}
 
-          <div className="mt-12 text-center">
+          <div className="mt-6 text-center">
 
             <p className="mx-auto max-w-3xl text-sm sm:text-base leading-7 text-slate-500">
 
