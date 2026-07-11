@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Baby,
   Phone,
+  ChevronRight,
 } from "lucide-react";
 
 export default function ParentsPage() {
@@ -17,14 +18,31 @@ export default function ParentsPage() {
 
       <section className="relative bg-gradient-to-br from-pink-50 via-white to-sky-50">
 
+       
         <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-pink-200/40 blur-3xl" />
 
         <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-sky-200/40 blur-3xl" />
 
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-12 lg:pt-44 lg:pb-16">
+            
+                      {/* Breadcrumb */}
+<div className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-500">
+  <Link
+    href="/"
+    className="transition hover:text-pink-600"
+  >
+    Home
+  </Link>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+  <ChevronRight className="h-4 w-4 text-slate-400" />
+
+  <span className="text-pink-500 font-medium">
+    Parents
+  </span>
+</div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 
             {/* LEFT CONTENT */}
@@ -165,7 +183,7 @@ export default function ParentsPage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 
             {/* IMAGE */}
@@ -277,7 +295,7 @@ export default function ParentsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 
 
@@ -392,7 +410,7 @@ export default function ParentsPage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 
             {/* IMAGE */}
@@ -516,7 +534,7 @@ export default function ParentsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
 
 

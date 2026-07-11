@@ -13,7 +13,7 @@ import {
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openServiceMenu, setOpenServiceMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +68,20 @@ export default function Header() {
       href: "/parents",
     },
 
+        {
+      name: "Gallery",
+      href: "/gallery",
+       dropdown: [
+        {
+          name: "Images",
+          href: "/gallery/images",
+        },
+        {
+          name: "Videos",
+          href: "/gallery/videos",
+        },
+      ]
+    },
     {
       name: "Patient Resources",
       href: "/resources",
@@ -100,6 +114,7 @@ export default function Header() {
                 alt="Mini Marvels"
                 fill
                 priority
+                 sizes="(max-width:768px) 72px, 96px"
                 className="object-cover"
               />
 
@@ -265,7 +280,7 @@ export default function Header() {
       <div
   className={`fixed inset-0 z-[999] transition-all duration-300 lg:hidden ${
     isOpen
-      ? "opacity-100 visible"
+      ? "opacity-100 visible pointer-events-auto"
       : "opacity-0 invisible pointer-events-none"
   }`}
 >
@@ -273,13 +288,13 @@ export default function Header() {
 
   <div
     onClick={() => setIsOpen(false)}
-    className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
+    className="absolute inset-0 z-[999] bg-slate-900/50 backdrop-blur-sm"
   />
 
   {/* Drawer */}
 
   <div
-    className={`absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ${
+    className={`absolute right-0 top-0 h-full w-[82%] max-w-sm z-[1000] bg-white shadow-2xl transition-transform duration-300 ${
       isOpen ? "translate-x-0" : "translate-x-full"
     }`}
   >
@@ -333,16 +348,17 @@ export default function Header() {
   </Link>
 
   <button
+    type="button"
     onClick={() =>
-      setOpenServiceMenu(!openServiceMenu)
+      setOpenMenu(openMenu === item.name ? null : item.name)
     }
-    className="text-pink-500"
+    className="text-pink-500 p-2 rounded-full hover:bg-pink-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-200"
   >
 
                   <ChevronDown
                     size={18}
                     className={`transition-transform duration-300 ${
-                      openServiceMenu
+                      openMenu === item.name
                         ? "rotate-180"
                         : ""
                     }`}
@@ -356,7 +372,7 @@ export default function Header() {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openServiceMenu
+                  openMenu === item.name
                     ? "max-h-96"
                     : "max-h-0"
                 }`}
@@ -367,7 +383,7 @@ export default function Header() {
                     href={service.href}
                     onClick={() => {
                       setIsOpen(false);
-                      setOpenServiceMenu(false);
+                      setOpenMenu(null);
                     }}
                     className="
                       flex

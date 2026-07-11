@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Moon,
   Syringe,
+  ChevronRight,
 } from "lucide-react";
 
 const resources = [
@@ -80,7 +81,21 @@ const [emblaRef] = useEmblaCarousel(
   <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-rose-200/40 blur-3xl"></div>
 
   <div className="relative max-w-7xl mx-auto px-6 text-center">
+    {/* Breadcrumb */}
+<div className="mb-6 flex items-center justify-center gap-2 text-sm font-medium text-slate-500">
+  <Link
+    href="/"
+    className="transition hover:text-pink-600"
+  >
+    Home
+  </Link>
 
+  <ChevronRight className="h-4 w-4 text-slate-400" />
+
+  <span className="font-medium text-pink-500">
+    Patient Resources
+  </span>
+</div>
     <span className="inline-block rounded-full bg-pink-100 text-pink-600 px-5 py-2 text-sm font-semibold">
       Mini Marvels Child Care Clinic
     </span>

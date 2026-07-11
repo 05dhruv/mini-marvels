@@ -131,7 +131,7 @@ export default function AboutSection() {
             <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-start gap-5 text-center sm:text-left">
 
               <Link
-                href="#services"
+                href="/services"
                 className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-pink-500 px-8 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-pink-600 hover:-translate-y-1 hover:shadow-2xl"
               >
                 Explore Our Services

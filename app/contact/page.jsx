@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   MapPin,
   Phone,
@@ -8,6 +10,7 @@ import {
   Send,
   ArrowRight,
   MessageCircle,
+  ChevronRight,
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -33,6 +36,22 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
           <div className="max-w-4xl mx-auto text-center">
+
+            {/* Breadcrumb */}
+<div className="mb-6 flex items-center justify-center gap-2 text-sm font-medium text-slate-500">
+  <Link
+    href="/"
+    className="transition hover:text-pink-600"
+  >
+    Home
+  </Link>
+
+  <ChevronRight className="h-4 w-4 text-slate-400" />
+
+  <span className="font-medium text-pink-500">
+    Contact Us
+  </span>
+</div>
 
             <span className="inline-flex rounded-full bg-pink-100 px-6 py-3 text-sm font-semibold tracking-[0.18em] text-pink-600 shadow-sm">
 

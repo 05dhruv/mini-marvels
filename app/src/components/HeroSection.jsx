@@ -148,7 +148,7 @@ export default function HeroSection() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
 
               <Link
-                href="#appointment"
+                href="/appointment"
                 className="inline-flex items-center justify-center rounded-xl bg-pink-500 hover:bg-pink-600 text-white font-semibold px-8 py-4 transition-all duration-300 hover:shadow-xl"
               >
                 Book Appointment
