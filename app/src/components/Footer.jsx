@@ -125,7 +125,22 @@ export default function Footer() {
                   <span className="mr-2 h-2 w-2 rounded-full bg-pink-400 transition-all duration-300 group-hover:scale-150"></span>
                   For Parents
                 </Link>
+                
+                <Link
+                  href="blogs"
+                  className="group flex items-center text-slate-300 transition-all duration-300 hover:text-pink-400"
+                >
+                  <span className="mr-2 h-2 w-2 rounded-full bg-pink-400 transition-all duration-300 group-hover:scale-150"></span>
+                  Blogs
+                </Link>
 
+                <Link
+                  href="gallery"
+                  className="group flex items-center text-slate-300 transition-all duration-300 hover:text-pink-400"
+                >
+                  <span className="mr-2 h-2 w-2 rounded-full bg-pink-400 transition-all duration-300 group-hover:scale-150"></span>
+                  Gallery
+                </Link>
                 <Link
                   href="#appointment"
                   className="group flex items-center text-slate-300 transition-all duration-300 hover:text-pink-400"

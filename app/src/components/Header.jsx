@@ -67,6 +67,10 @@ export default function Header() {
       name: "Parents",
       href: "/parents",
     },
+    {
+      name: "Blogs",
+      href: "/blogs",
+    },
 
         {
       name: "Gallery",
