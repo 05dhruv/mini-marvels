@@ -56,12 +56,12 @@ export default function BlogPage() {
                       bg-pink-300 h-27 flex flex-col justify-between">
                   <div>
                     <h3
-                         className="text-xl font-bold text-black mb-2 leading-snug line-clamp-2"
+                         className="text-xl font-bold text-slate-900 mb-2 leading-snug line-clamp-2"
                       title={blog.title}
                     >
                       {blog.title}
                     </h3>
-                    <p className="text-sm text-teal-50 line-clamp-1">
+                    <p className="text-sm text-slate-600 line-clamp-1">
                       {blog.subtitle}
                     </p>
                   </div>

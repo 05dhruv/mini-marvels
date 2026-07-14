@@ -43,30 +43,18 @@ export default async function BlogPostPage({ params }) {
 
   return (
 
-    <div className="min-h-screen bg-[#EDF4F8]">
-      {/* Banner */}
-      <div className="w-[100%] md:w-full h-[30vh] md:h-[120vh] overflow-hidden mt-0 relative">
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={1920}
-          height={1080}
-          className="w-full h-full object-cover"
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        />
-      </div>
-
-      <div className="py-20 bg-[#EDF4F8]">
+    <div className="min-h-screen bg-pink-100">
+      
+      <div className="py-34 bg-pink-100">
         <div className="container mx-auto px-6">
           {/* Breadcrumb */}
-          <nav className="mb-10" aria-label="Breadcrumb">
+          <nav className="mb-32" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
               <li><Link href="/" className="hover:text-gray-900">Home</Link></li>
               <li><ChevronRight className="w-4 h-4" /></li>
               <li><Link href="/blog" className="hover:text-gray-900">Blog</Link></li>
               <li><ChevronRight className="w-4 h-4" /></li>
-              <li className="text-gray-900 font-medium">{post.title}</li>
+              <li className="text-gray-700 font-medium">{post.title}</li>
             </ol>
           </nav>
 
