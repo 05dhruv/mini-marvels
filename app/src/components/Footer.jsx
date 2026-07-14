@@ -127,11 +127,11 @@ export default function Footer() {
                 </Link>
                 
                 <Link
-                  href="blogs"
+                  href="blog"
                   className="group flex items-center text-slate-300 transition-all duration-300 hover:text-pink-400"
                 >
                   <span className="mr-2 h-2 w-2 rounded-full bg-pink-400 transition-all duration-300 group-hover:scale-150"></span>
-                  Blogs
+                  Blog
                 </Link>
 
                 <Link

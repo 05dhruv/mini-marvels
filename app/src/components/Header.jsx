@@ -68,8 +68,8 @@ export default function Header() {
       href: "/parents",
     },
     {
-      name: "Blogs",
-      href: "/blogs",
+      name: "Blog",
+      href: "/blog",
     },
 
         {
