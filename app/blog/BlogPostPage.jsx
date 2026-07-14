@@ -7,7 +7,7 @@ export default function BlogPage() {
   const sortedBlogs = blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <section className="py-16 px-4 bg-[#EDF4F8]">
+    <section className="py-32 px-4 bg-pink-50">
       <div className="max-w-7xl mx-auto">
 {/* Header */}
 <div className="text-center mb-16">
@@ -53,10 +53,10 @@ export default function BlogPage() {
                 
                 {/* Content */}
                 <div className="p-6 
-bg-[#28344B] h-27 flex flex-col justify-between">
+                      bg-pink-300 h-27 flex flex-col justify-between">
                   <div>
                     <h3
-                         className="text-xl font-bold text-white mb-2 leading-snug line-clamp-2"
+                         className="text-xl font-bold text-black mb-2 leading-snug line-clamp-2"
                       title={blog.title}
                     >
                       {blog.title}
